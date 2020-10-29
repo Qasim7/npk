@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     Spinner spinnerplant;
     String[] plantname = {"Buğda", "Arpa", "Qarğıdalı"};
     TextInputEditText plannedfertility;
-    TextView azot, fosfor, kalium;
+    TextView azot, fosfor, kalium, contact;
     double a, f, k, p;
     int number;
     Button calculate;
@@ -39,22 +40,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = findViewById(R.id.toolber);
-        toolbar.inflateMenu(R.menu.about);
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-
-                switch (item.getItemId()){
-                    case R.id.info:
-                        Intent intent = new Intent(getApplicationContext(),About.class);
-                        startActivity(intent);
-                        return true;
-                    default:
-                return false;}
-
-            }
-        });
+//        toolbar = findViewById(R.id.toolber);
+//        toolbar.inflateMenu(R.menu.about);
+//        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+//            @Override
+//            public boolean onMenuItemClick(MenuItem item) {
+//
+//                switch (item.getItemId()){
+//                    case R.id.info:
+//                        Intent intent = new Intent(getApplicationContext(),About.class);
+//                        startActivity(intent);
+//                        return true;
+//                    default:
+//                return false;}
+//
+//            }
+//        });
 
         plannedfertility = findViewById(R.id.ed_fertility);
         azot = findViewById(R.id.tv_azot);
@@ -62,6 +63,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         kalium = findViewById(R.id.tv_kalium);
         spinnerplant = findViewById(R.id.spinnerplant);
         calculate = findViewById(R.id.calculate);
+        contact = findViewById(R.id.contact);
+        contact.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:*5656"))));
+
 
         spinnerplant.setOnItemSelectedListener(this);
 
