@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Moran</string>
     <string name="yazi">Keyfiyyətli toxum, uyğun gübrə \n və düzgün aqro qulluq məsləhəti \n əldə etmək üçün əlaqə saxlayın:</string>
+    <string name="meslehet">Aqrotexniki məsləhətlər çoxillik \n elmi araşdırmaların nəticəsidir və \n Əkinçilik Emli Tədqiqat İnstitutunun \n alim-aqronomları tərəfindən veriləcəkdir.</string>
+    <string name="melumat">Gübrələr, sertifikatlı toxumlar və \n aqrotexniki qulluq vasitələrini Sünbül.AZ \n mağazalar şəbəkəsinin bölgənizə yaxın \n filialından əldə edə bilərsiniz</string>
 </resources>

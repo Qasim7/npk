@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 public class About extends AppCompatActivity {
 
-    Toolbar toolbar;
     TextView elaqe, number;
 
     @Override
@@ -21,10 +20,6 @@ public class About extends AppCompatActivity {
 
         elaqe = findViewById(R.id.elaqe);
         number = findViewById(R.id.number);
-
-        toolbar = findViewById(R.id.tb);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         elaqe.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:0502551091"))));
         number.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:*5656"))));
